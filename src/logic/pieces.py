@@ -21,5 +21,12 @@ class Pawn(Piece):
 
     def valid_moves(self, board):
         potential_moves = []
-        letter, num = self.square
-        
+        num = int(self.square[1]) + 1
+        # Going right
+        while (num <= 8):
+            self.square = self.square[0] + str(num)
+            if board.piece_at(self.square) is not None:
+                break
+            potential_moves.append(self.square)
+            num += 1
+        return potential_moves
