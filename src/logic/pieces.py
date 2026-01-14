@@ -25,8 +25,8 @@ class Pawn(Piece):
         # Going right
         while (num <= 8):
             self.square = self.square[0] + str(num)
+            potential_moves.append(self.square)
             if board.piece_at(self.square) is not None:
                 break
-            potential_moves.append(self.square)
             num += 1
         return potential_moves
