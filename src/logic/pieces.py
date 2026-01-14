@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Piece(ABC):
-    # square is a list: [letter, num] where letter is a-h and num is 1-8
+    # square is a string: letter + num; where letter is a-h and num is 1-8
     def __init__(self, color, square):
         self.color = color
         self.square = square
